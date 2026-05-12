@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shape Up! | Meal Plan</title>
+    <link rel="stylesheet" href="../styles/main.css">
+</head>
+
+<body>
+    <header>
+        <a href="../index.html">
+            <img src="../images/shape_up_logo.png" alt="Shape Up logo">
+        </a>
+        <h1>Shape Up!</h1>
+        <h2>Find the best fit for you</h2>
+    </header>
+
+    <nav>
+        <ul class="main-menu">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../strength/training.html">Strength Training</a></li>
+            <li><a href="../cardio/index.html">Cardio Exercises</a></li>
+            <li><a href="../stress/index.html">Stress Relief</a></li>
+            <li><a href="index.html" class="current">Healthy Diets</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section class="meal-plan">
+            <h2>Meal plan order form</h2>
+
+            <p>
+                Fill out the form as completely as possible and we will email you a weekly meal plan,
+                customized for you--your lifestyle, your goals, and your personal needs.
+            </p>
+
+            <p class="required-note">Asterisks (*) indicate required entries.</p>
+
+            <form action="#" method="post">
+                <fieldset class="meal-fieldset">
+                    <legend>Tell us about yourself</legend>
+
+                    <label for="full_name">Full name *</label>
+                    <input type="text" id="full_name" name="full_name" required>
+
+                    <label for="email">Email *</label>
+                    <input type="email" id="email" name="email" required>
+
+                    <label for="gender">Gender *</label>
+                    <select id="gender" name="gender" required>
+                        <option value="">Select a gender</option>
+                        <option>Male</option>
+                        <option>Female</option>
+                        <option>Non-Binary</option>
+                    </select>
+
+                    <label for="height">Height *</label>
+                    <input type="text" id="height" name="height" placeholder="Example: 5ft, 6in" required>
+
+                    <label for="weight">Weight *</label>
+                    <input type="text" id="weight" name="weight" placeholder="Example: 145lbs" required>
+
+                    <label for="age">Age</label>
+                    <select id="age" name="age">
+                        <option value="">Select your age</option>
+                        <option>under 18</option>
+                        <option>18 - 34</option>
+                        <option>35 - 44</option>
+                        <option>50 - 69</option>
+                        <option>70+</option>
+                    </select>
+                </fieldset>
+
+                <fieldset class="meal-fieldset">
+                    <legend>Lifestyle and goals</legend>
+
+                    <p>Which currently matches your present lifestyle?</p>
+                    <div class="inline-options">
+                        <input type="radio" id="active" name="lifestyle" value="active">
+                        <label for="active" class="inline-label">Active</label>
+
+                        <input type="radio" id="moderate" name="lifestyle" value="moderate">
+                        <label for="moderate" class="inline-label">Moderate</label>
+
+                        <input type="radio" id="sedentary" name="lifestyle" value="sedentary" checked>
+                        <label for="sedentary" class="inline-label">Sedentary</label>
+                    </div>
+
+                    <p>What are your weight goals?</p>
+                    <div class="inline-options">
+                        <input type="radio" id="gain" name="goal" value="gain">
+                        <label for="gain" class="inline-label">Gain</label>
+
+                        <input type="radio" id="lose" name="goal" value="lose">
+                        <label for="lose" class="inline-label">Lose</label>
+
+                        <input type="radio" id="maintain" name="goal" value="maintain" checked>
+                        <label for="maintain" class="inline-label">Maintain</label>
+                    </div>
+                </fieldset>
+
+                <fieldset class="meal-fieldset">
+                    <legend>Food preferences and restrictions</legend>
+
+                    <p>Do you have any dietary restrictions? (select all that apply)</p>
+
+                    <div class="inline-options checkbox-line">
+                        <input type="checkbox" id="vegetarian" name="restrictions[]" value="vegetarian">
+                        <label for="vegetarian" class="inline-label">Vegetarian</label>
+
+                        <input type="checkbox" id="gluten_free" name="restrictions[]" value="gluten-free">
+                        <label for="gluten_free" class="inline-label">Gluten-free</label>
+
+                        <input type="checkbox" id="kosher" name="restrictions[]" value="kosher">
+                        <label for="kosher" class="inline-label">Kosher</label>
+
+                        <input type="checkbox" id="low_salt" name="restrictions[]" value="low-salt">
+                        <label for="low_salt" class="inline-label">Low salt</label>
+                    </div>
+
+                    <label for="other" class="other-label">Other, please explain:</label>
+                    <textarea id="other" name="other"></textarea>
+                </fieldset>
+
+                <fieldset class="meal-buttons">
+                    <input type="submit" value="Submit" class="form-button submit-button">
+                    <input type="reset" value="Reset" class="form-button reset-button">
+                </fieldset>
+            </form>
+        </section>
+
+        <aside>
+            <h2>Additional resources</h2>
+            <ul>
+                <li>
+                    <img src="../images/run-icon.png" alt="">
+                    <a href="#">Physical activity and health</a>
+                </li>
+                <li>
+                    <img src="../images/stretch-icon.png" alt="">
+                    <a href="#">Stretching exercises</a>
+                </li>
+                <li>
+                    <img src="../images/strength-icon.png" alt="">
+                    <a href="#">Strength training</a>
+                </li>
+                <li>
+                    <img src="../images/cardio-icon.png" alt="">
+                    <a href="#">Cardiovascular training</a>
+                </li>
+                <li>
+                    <img src="../images/yoga-icon.png" alt="">
+                    <a href="#">Yoga workout</a>
+                </li>
+            </ul>
+        </aside>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Shape Up!</p>
+    </footer>
+</body>
+</html>

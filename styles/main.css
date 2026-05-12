@@ -1,0 +1,407 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Load American Captain for the page title in the header */
+@font-face {
+  font-family: "American Captain";
+  src: url("../fonts/American Captain.ttf") format("truetype");
+}
+
+body {
+  width: 100%;
+  margin: 0;
+  border: none;
+  background-color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 100%;
+  line-height: 1.35;
+}
+
+a {
+  font-weight: bold;
+}
+
+/* Header */
+header {
+  padding: 15px 20px 10px;
+  border-bottom: 3px solid steelblue;
+  background: linear-gradient(white, lightsteelblue);
+  overflow: auto;
+}
+
+header img {
+  float: left;
+  width: 100%;
+  max-width: 85px;
+  min-width: 70px;
+  height: auto;
+  margin-right: 15px;
+}
+
+/* Use American Captain for the main site title */
+header h1 {
+  font-size: 2.4em;
+  color: steelblue;
+  font-style: italic;
+  font-family: "American Captain", Arial, Helvetica, sans-serif;
+  line-height: 1;
+  margin-top: 5px;
+}
+
+header h2 {
+  font-size: 1.15em;
+  font-weight: bold;
+  color: black;
+  margin-top: 2px;
+}
+
+/* Navigation */
+nav {
+  background-color: steelblue;
+  padding: 0;
+}
+
+#mobile-nav {
+  display: none;
+  width: 100%;
+  padding: 0.5em;
+  font-size: 1em;
+}
+
+.main-menu {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0 10px;
+}
+
+.main-menu > li {
+  position: relative;
+}
+
+.main-menu > li > a {
+  display: block;
+  padding: 0.8em 1.2em;
+  color: white;
+  text-decoration: none;
+  font-size: 0.95em;
+}
+
+.main-menu > li > a:hover,
+.main-menu > li > a:focus {
+  background-color: #2f6f9f;
+}
+
+.main-menu > li > a.current {
+  border: 2px solid white;
+  border-radius: 10px;
+  margin: 4px 0;
+  padding: 0.55em 1.1em;
+}
+
+.submenu {
+  display: none;
+}
+
+/* Main */
+main {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 15px 18px;
+}
+
+section {
+  width: 100%;
+}
+
+section h2 {
+  font-size: 2em;
+  margin-bottom: 6px;
+}
+
+section h3 {
+  margin-top: 10px;
+  margin-bottom: 5px;
+  color: maroon;
+  font-size: 1.2em;
+}
+
+section p {
+  margin-bottom: 10px;
+  font-size: 1em;
+}
+
+section ul {
+  margin: 5px 0 10px 25px;
+}
+
+section li {
+  margin-bottom: 4px;
+}
+
+blockquote {
+  margin: 15px 0;
+}
+
+/* Figure for "What is stress?" */
+section figure {
+  float: left;
+  width: 200px;                 /* was 260px, narrower like the lab */
+  margin: 0 15px 10px 0;
+  border: 2px solid #c9b37e;
+  background-color: #fff6dd;
+}
+
+section figure img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+section figcaption {
+  font-weight: bold;
+  padding: 6px 8px;
+  line-height: 1.2;
+}
+
+/* Aside */
+aside {
+  width: 100%;
+  border: 2px solid steelblue;
+  border-radius: 18px;
+  padding: 14px 16px;
+  margin-top: 20px;
+  background-color: white;
+}
+
+aside h2,
+aside h3,
+aside h4 {
+  color: maroon;
+  margin-bottom: 10px;
+}
+
+aside ul {
+  list-style-type: none;
+  line-height: 1.35;
+  padding-left: 0;
+  margin-bottom: 0;
+}
+
+/* Make each icon+link sit on one line and icon small */
+aside li {
+  margin-bottom: 7px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+aside li img {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+}
+
+aside a:link,
+aside a:visited {
+  color: steelblue;
+  text-decoration: underline;
+}
+
+aside a:hover,
+aside a:focus {
+  color: maroon;
+}
+
+/* Footer */
+footer {
+  background-color: steelblue;
+  color: white;
+  font-size: 0.8em;
+  text-align: center;
+  padding: 8px 20px;
+  margin-top: 20px;
+}
+
+/* Large screen layout */
+@media screen and (min-width: 768px) {
+  main {
+    display: flex;
+    align-items: flex-start;
+    gap: 24px;
+  }
+
+  section {
+    flex: 1 1 0;
+    min-width: 0;
+  }
+
+  aside {
+    flex: 0 0 230px;
+    margin-top: 0;
+    margin-left: 0;
+  }
+}
+/* Meal plan page */
+.meal-plan h2 {
+    font-size: 2em;
+    margin-bottom: 4px;
+}
+
+.meal-plan p {
+    font-size: 0.9em;
+    line-height: 1.3;
+    margin-bottom: 8px;
+    max-width: 580px;
+}
+
+.required-note {
+    margin-bottom: 10px;
+}
+
+.meal-fieldset,
+.meal-buttons {
+    border: 2px solid #d0d0d0;
+    border-radius: 3px;
+    padding: 8px 10px 10px;
+    margin-bottom: 12px;
+    background-color: #fff;
+}
+
+.meal-fieldset legend {
+    color: maroon;
+    font-weight: bold;
+    font-size: 0.95em;
+    padding: 0 4px;
+}
+
+.meal-fieldset label {
+    display: block;
+    font-size: 0.85em;
+    margin-bottom: 3px;
+    color: #333;
+}
+
+.meal-fieldset input[type="text"],
+.meal-fieldset input[type="email"],
+.meal-fieldset select {
+    width: 100%;
+    max-width: 430px;
+    height: 28px;
+    padding: 3px 6px;
+    margin-bottom: 8px;
+    border: 2px solid #d66;
+    border-radius: 2px;
+    font-size: 0.9em;
+    background-color: #fff;
+}
+
+.meal-fieldset select {
+    border: 1px solid #aaa;
+    height: 26px;
+}
+
+.meal-fieldset textarea {
+    width: 100%;
+    max-width: 430px;
+    height: 72px;
+    border: 1px solid #aaa;
+    border-radius: 2px;
+    padding: 6px;
+    font-size: 0.9em;
+    resize: none;
+}
+
+.meal-fieldset p {
+    margin-bottom: 6px;
+    font-size: 0.85em;
+}
+
+.inline-options {
+    margin-bottom: 10px;
+    font-size: 0.85em;
+}
+
+.inline-options input[type="radio"],
+.inline-options input[type="checkbox"] {
+    margin-right: 3px;
+    vertical-align: middle;
+}
+
+.inline-label {
+    display: inline;
+    margin-right: 10px;
+    font-size: 0.85em;
+}
+
+.other-label {
+    margin-top: 2px;
+}
+
+.meal-buttons {
+    padding-top: 9px;
+    padding-bottom: 9px;
+}
+
+.form-button {
+    min-width: 78px;
+    padding: 5px 14px;
+    border: 1px solid #555;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+    font-size: 0.85em;
+    cursor: pointer;
+    margin-right: 10px;
+    box-shadow: inset 0 1px 0 rgba(255,255,255,.35);
+}
+
+.submit-button {
+    background-color: steelblue;
+}
+
+.reset-button {
+    background-color: maroon;
+}
+
+.submit-button:hover,
+.submit-button:focus {
+    background-color: #2f6f9f;
+}
+
+.reset-button:hover,
+.reset-button:focus {
+    background-color: #800000;
+}
+
+/* Make the meal page spacing closer to the screenshot */
+.meal-plan {
+    flex: 1 1 0;
+    min-width: 0;
+}
+
+.meal-plan form {
+    max-width: 470px;
+}
+
+/* Responsive cleanup */
+@media screen and (max-width: 767px) {
+    .meal-fieldset input[type="text"],
+    .meal-fieldset input[type="email"],
+    .meal-fieldset select,
+    .meal-fieldset textarea {
+        max-width: 100%;
+    }
+
+    .meal-plan form {
+        max-width: 100%;
+    }
+
+    .inline-label {
+        margin-right: 8px;
+    }
+}
